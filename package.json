@@ -1,0 +1,28 @@
+{
+  "name": "setu-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Setu public web platform (marketing + signup + subscription checkout) — deploys to Vercel. The main agent platform runs separately at app.setu.company.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "lucide-react": "0.456.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.5",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "tailwindcss": "4.1.13",
+    "@tailwindcss/postcss": "4.1.13",
+    "postcss": "8.5.6",
+    "typescript": "5.7.3"
+  }
+}

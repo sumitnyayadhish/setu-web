@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/*
+ * Setu marketing design tokens (dark theme), mirroring the app's look so the Vercel site and
+ * the main platform feel like one product. Tailwind v4 maps these CSS vars to utility classes
+ * via @theme inline (bg-background, text-foreground, text-primary, border-border, etc.).
+ */
+:root {
+  --background: #0b1120;
+  --foreground: #e6edf6;
+  --card: #0f1729;
+  --muted: #1b2638;
+  --muted-foreground: #93a4bd;
+  --border: #243049;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --accent: #1b2638;
+  --destructive: #f87171;
+  --ring: #6366f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-ring: var(--ring);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible keyboard focus everywhere (a11y). */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
